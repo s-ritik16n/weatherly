@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
 .App {
   text-align: center;
 }
@@ -15,24 +17,167 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 4vmin);
   color: white;
 }
+
+
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.label-title {
+  padding-right: 2vw;
+}
+
+.main {
+  height: max-content;
+}
+
+.input-field {
+  padding: 10px;
+  border-width: thin;
+  min-height: 2vh;
+}
+
+.border-8{
+  border-radius: 8px;
+  border-color: darkgrey;
+
+}
+
+.submit-btn {
+  margin: 2vh;
+  display: inline-block;
+}
+
+.width-44 {
+  width: 44vw;
+}
+
+button {
+  background-color:#24A0ED;
+  color: white;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 19px;
+/* font-family: 'Roboto', sans-serif; */
+}
+
+@media only screen and (max-width: 600px) {
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }  
+  .flex-prop {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
   }
-  to {
-    transform: rotate(360deg);
+  .flex-prop-main {
+    justify-content: center;
+    
+  }
+  .min-height-header {
+    min-height: 18vh;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .min-height-header{
+    min-height: 16vh;
+  }
+  .flex {
+    display: flex;
+    flex-direction: row;
+  }
+  .flex-prop {
+    align-items: center;
+    justify-content: start;
+    align-content: center;
+
+  }
+  .flex-prop-main {
+    justify-content: center;
+    
+  }
+  .padding-left-header {
+    padding-left: 2vw;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .min-height-header{
+    min-height: 16vh;
+  }
+  .flex {
+    display: flex;
+    flex-direction: row;
+  }
+  .flex-prop {
+    align-items: center;
+    justify-content: start;
+    align-content: center;
+
+  }
+  .flex-prop-main {
+    justify-content: center;
+    
+  }
+  .padding-left-header {
+    padding-left: 2vw;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .min-height-header {
+    min-height: 16vh;
+  }
+  .flex {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .flex-prop {
+    align-items: center;
+    justify-content: start;
+    align-content: center;
+
+  }
+  .flex-prop-main {
+    justify-content: center;
+    
+  }
+  .padding-left-header {
+    padding-left: 3vw;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .min-height-header {
+    min-height: 18vh;
+  }
+  .flex {
+    display: flex;
+    flex-direction: row;
+  }
+  .flex-prop {
+    align-items: center;
+    justify-content: start;
+    align-content: center;
+  }
+
+  .flex-prop-main {
+    justify-content: center;
+  }
+  .padding-left-header {
+    padding-left: 4vw;
   }
 }

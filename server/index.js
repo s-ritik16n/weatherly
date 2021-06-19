@@ -1,15 +1,21 @@
 const express = require("express");
 import { getWeather } from "./weather";
+import cors from "cors";
+
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3001;
 
 const app = express();
-
+app.use(cors());
 app.get("/weather", (req, res) => {
-    getWeather("gwalior").then((data) => {
-        res.json({success: true, data})
-    }).catch((err) => res.json({success: false, err}))
+    console.log("weather API called");
+    try {
+        getWeather("gwalior", res);
+    } catch (error) {
+        console.log("error - ", error);
+        res.send({success: false, err})
+    }
 })
 
 app.listen(PORT, () => {
