@@ -12,7 +12,7 @@ cd client
 npm install
 npm start
 ```
-Open a separate command line window from inside the application's root folder and run -
+4. Open a separate command line window from inside the application's root folder and run -
 ```
 npm start
 ```
