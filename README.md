@@ -7,10 +7,10 @@
 3. open terminal inside the application's root folder(weather-app) and run the following commands -
 
 <code>
-    npm install
-    cd client
-    npm install
-    npm start
-    cd ..
+    npm install<br/>
+    cd client<br/>
+    npm install<br/>
+    npm start<br/>
+    cd ..<br/>
     npm start
 </code>
