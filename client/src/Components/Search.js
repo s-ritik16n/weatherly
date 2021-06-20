@@ -16,6 +16,17 @@ export class Search extends React.Component{
         }
     }
 
+    clearInput(event) {
+        event.preventDefault();
+        this.location.value = null;
+        this.setState({
+            weather: null,
+            notFound: false,
+            msg: "",
+            loading: false
+        })
+    }
+
     getWeather(event) {
         event.preventDefault();
         console.log(this.location.value);
@@ -29,7 +40,8 @@ export class Search extends React.Component{
         }
         this.setState({
             loading: true,
-            msg: ""
+            msg: "",
+            weather: null
         })
         fetch("http://localhost:3001/weather/"+this.location.value)
             .then(res => res.json())
@@ -74,6 +86,8 @@ export class Search extends React.Component{
                         </label>
                         <div className="submit-btn">
                             <button className="input-field" type="submit" value="Submit"> Submit</button>
+                            <button style={{marginLeft: "6px"}} onClick={(event) => this.clearInput(event)} className="input-field">Clear</button>
+
                         </div>
                     </form>
                 </div>
