@@ -11,6 +11,8 @@ npm install
 cd client
 npm install
 npm start
-cd ..
+```
+Open a separate command line window from inside the application's root folder and run -
+```
 npm start
 ```
