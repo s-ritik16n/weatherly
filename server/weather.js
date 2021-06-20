@@ -43,8 +43,8 @@ export const getWeather = async (query, res) => {
     })
     try {
         let result = await p;
-        console.log("result - ", result);
-        res.send({success: true, data: JSON.stringify(result)})
+        console.log("result - ", typeof JSON.parse(result));
+        res.send({success: true, data: JSON.parse(result)})
     } catch (error) {
         res.send({success: false})
     }

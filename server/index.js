@@ -8,13 +8,19 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 app.use(cors());
-app.get("/weather", (req, res) => {
-    console.log("weather API called");
+app.get("/weather/:location", (req, res) => {
+
     try {
-        getWeather("gwalior", res);
+        let location = req.params.location;
+        if(location) {
+            console.log("weather API called");
+            getWeather(location, res);
+        } else {
+            res.send({success: false})
+        }
     } catch (error) {
-        console.log("error - ", error);
-        res.send({success: false, err})
+        console.log("error in weather[GET] - ", error);
+        res.send({success: false, err})        
     }
 })
 
